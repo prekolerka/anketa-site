@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="container">
+        <h1 class="title">Анкета</h1>
+        <p class="subtitle">
+          Приветик! С помощью этой анкеты мы сможем понять, насколько подходим друг другу.
+          Заполни честно, с душой и без приколов, которые потом придется объяснять.
+          В конце ты сможешь посмотреть мою анкету.
+        </p>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <div class="container form-container">
+        <form class="candidate-form" id="candidateForm">
+
+          <!-- Шаг 1 -->
+          <div class="form-step active" data-step="1">
+            <h2 class="step-title">Шаг 1 — Общая информация</h2>
+
+            <div class="step">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Введи имя" required>
+
+              <label for="age">Возраст</label>
+              <input type="number" id="age" name="age" min="18" max="99" placeholder="Введи возраст" required>
+
+              <label for="height">Рост</label>
+              <input type="number" id="height" name="height" placeholder="Например 180">
+
+              <label for="weight">Вес</label>
+              <input type="number" id="weight" name="weight" placeholder="Например 75">
+
+              <label for="city">Город проживания</label>
+              <input type="text" id="city" name="city" placeholder="Введи город" required>
+            </div>
+
+            <div class="step">
+              <p class="question">С кем живешь?</p>
+              <label>
+                <input type="radio" name="living_with" value="Один" required>
+                Один
+              </label>
+              <label>
+                <input type="radio" name="living_with" value="С родителями">
+                С родителями
+              </label>
+              <label>
+                <input type="radio" name="living_with" value="С друзьями">
+                С друзьями
+              </label>
+              <label>
+                <input type="radio" name="living_with" value="Другое">
+                Другое
+              </label>
+              <input type="text" id="living-with-other" name="living_with_other" placeholder="Напиши свой вариант" class="other-input hidden">
+            </div>
+
+            <div class="step">
+              <p class="question">Где живешь?</p>
+              <label>
+                <input type="radio" name="housing_type" value="Квартира" required>
+                Квартира
+              </label>
+              <label>
+                <input type="radio" name="housing_type" value="Дом">
+                Дом
+              </label>
+              <label>
+                <input type="radio" name="housing_type" value="Общага">
+                Общага
+              </label>
+              <label>
+                <input type="radio" name="housing_type" value="Улица">
+                Улица
+              </label>
+              <label>
+                <input type="radio" name="housing_type" value="Другое">
+                Другое
+              </label>
+              <input type="text" id="housing-type-other" name="housing_type_other" placeholder="Напиши свой вариант" class="other-input hidden">
+            </div>
+
+            <div class="step">
+              <p class="question">Жилье</p>
+              <label>
+                <input type="radio" name="housing_status" value="Свое" required>
+                Свое
+              </label>
+              <label>
+                <input type="radio" name="housing_status" value="Аренда">
+                Аренда
+              </label>
+              <label>
+                <input type="radio" name="housing_status" value="Ипотека">
+                Ипотека
+              </label>
+              <label>
+                <input type="radio" name="housing_status" value="Бесплатно">
+                Бесплатно
+              </label>
+              <label>
+                <input type="radio" name="housing_status" value="Другое">
+                Другое
+              </label>
+              <input type="text" id="housing-status-other" name="housing_status_other" placeholder="Напиши свой вариант" class="other-input hidden">
+            </div>
+          </div>
+
+          <!-- Шаг 2 -->
+          <div class="form-step" data-step="2">
+            <h2 class="step-title">Шаг 2 — Планы и жизнь</h2>
+
+            <div class="step">
+              <label for="dream-city">В каком городе хотел бы жить и почему?</label>
+              <textarea id="dream-city" name="dream_city" rows="5" placeholder="Напиши город и почему именно он"></textarea>
+            </div>
+
+            <div class="step">
+              <p class="question">Был ли женат?</p>
+              <label>
+                <input type="radio" name="marital_status" value="Нет" required>
+                Нет
+              </label>
+              <label>
+                <input type="radio" name="marital_status" value="Женат">
+                Женат
+              </label>
+              <label>
+                <input type="radio" name="marital_status" value="В разводе">
+                В разводе
+              </label>
+              <label>
+                <input type="radio" name="marital_status" value="Вдовец">
+                Вдовец
+              </label>
+              <label>
+                <input type="radio" name="marital_status" value="Другое">
+                Другое
+              </label>
+              <input type="text" id="marital-status-other" name="marital_status_other" placeholder="Напиши свой вариант" class="other-input hidden">
+            </div>
+
+            <div class="step">
+              <p class="question">Хотел бы жениться?</p>
+              <label>
+                <input type="radio" name="want_marriage" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="want_marriage" value="Нет">
+                Нет
+              </label>
+              <label>
+                <input type="radio" name="want_marriage" value="Не уверен">
+                Не уверен
+              </label>
+            </div>
+
+            <div class="step">
+              <p class="question">Есть дети?</p>
+              <label>
+                <input type="radio" name="children" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="children" value="Нет и не хочу">
+                Нет и не хочу
+              </label>
+              <label>
+                <input type="radio" name="children" value="Нет, но хотел бы">
+                Нет, но хотел бы
+              </label>
+            </div>
+          </div>
+
+          <!-- Шаг 3 -->
+          <div class="form-step" data-step="3">
+            <h2 class="step-title">Шаг 3 — Работа и развитие</h2>
+
+            <div class="step">
+              <label for="job">Кем и где работаешь?</label>
+              <input type="text" id="job" name="job" placeholder="Например: дизайнер в студии / менеджер / разработчик">
+
+              <label>
+                <input type="checkbox" name="not_working" value="Не работаю">
+                Не работаю
+              </label>
+
+              <label for="income">Сколько зарабатываешь?</label>
+              <input type="text" id="income" name="income" placeholder="Напиши сумму или диапазон">
+
+              <label for="change-job">Хотел бы сменить работу и почему?</label>
+              <textarea id="change-job" name="change_job" rows="4" placeholder="Если да, то почему"></textarea>
+
+              <label for="study">Учишься чему-то новому? Курсы, самообразование, универ и тп</label>
+              <textarea id="study" name="study" rows="4" placeholder="Напиши, если да"></textarea>
+            </div>
+          </div>
+
+          <!-- Шаг 4 -->
+          <div class="form-step" data-step="4">
+            <h2 class="step-title">Шаг 4 — Образ жизни и интересы</h2>
+
+            <div class="step">
+              <label for="wake-up">Во сколько просыпаешься?</label>
+              <input type="time" id="wake-up" name="wake_up">
+
+              <label for="sleep-time">Во сколько ложишься?</label>
+              <input type="time" id="sleep-time" name="sleep_time">
+
+              <label for="sport">Занимаешься спортом и каким?</label>
+              <input type="text" id="sport" name="sport" placeholder="Например: зал, бег, йога, не занимаюсь">
+
+              <label for="hobby">Хобби / чем занимаешься в свободное время?</label>
+              <textarea id="hobby" name="hobby" rows="4" placeholder="Напиши, что любишь делать"></textarea>
+
+              <label for="weather">Любимая погода</label>
+              <input type="text" id="weather" name="weather" placeholder="Например: дождь, пасмурно, туман">
+
+              <label for="food">Любимое блюдо</label>
+              <input type="text" id="food" name="food" placeholder="Напиши любимое блюдо">
+
+              <label for="favorite-city">Любимый город</label>
+              <input type="text" id="favorite-city" name="favorite_city" placeholder="Напиши город">
+
+              <label for="film">Любимый фильм</label>
+              <input type="text" id="film" name="film" placeholder="Напиши фильм">
+
+              <label for="cartoon">Любимый мультфильм</label>
+              <input type="text" id="cartoon" name="cartoon" placeholder="Напиши мультфильм">
+
+              <label for="music">Любимая песня / исполнитель</label>
+              <input type="text" id="music" name="music" placeholder="Напиши песню или исполнителя">
+            </div>
+          </div>
+
+          <!-- Шаг 5 -->
+          <div class="form-step" data-step="5">
+            <h2 class="step-title">Шаг 5 — Характер и быт</h2>
+
+            <div class="step">
+              <label for="honesty">Честность</label>
+              <input type="range" id="honesty" name="honesty" min="1" max="10" value="5">
+
+              <label for="emotionality">Эмоциональность</label>
+              <input type="range" id="emotionality" name="emotionality" min="1" max="10" value="5">
+
+              <label for="aggression">Агрессия</label>
+              <input type="range" id="aggression" name="aggression" min="1" max="10" value="3">
+
+              <label for="jealousy">Ревность</label>
+              <input type="range" id="jealousy" name="jealousy" min="1" max="10" value="4">
+
+              <label for="openness">Открытость</label>
+              <input type="range" id="openness" name="openness" min="1" max="10" value="5">
+
+              <label for="cooking">Насколько любишь готовить</label>
+              <input type="range" id="cooking" name="cooking" min="1" max="10" value="5">
+
+              <label for="cleaning">Насколько любишь убираться</label>
+              <input type="range" id="cleaning" name="cleaning" min="1" max="10" value="5">
+
+              <label for="home-space">Насколько любишь обустраивать жилье</label>
+              <input type="range" id="home-space" name="home_space" min="1" max="10" value="5">
+            </div>
+
+            <div class="step">
+              <p class="question">Любишь кофе?</p>
+              <label>
+                <input type="radio" name="coffee" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="coffee" value="Нет">
+                Нет
+              </label>
+              <label>
+                <input type="radio" name="coffee" value="Иногда">
+                Иногда
+              </label>
+            </div>
+
+            <div class="step">
+              <p class="question">Любишь сыр?</p>
+              <label>
+                <input type="radio" name="cheese" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="cheese" value="Нет">
+                Нет
+              </label>
+            </div>
+          </div>
+
+          <!-- Шаг 6 -->
+          <div class="form-step" data-step="6">
+            <h2 class="step-title">Шаг 6 — Животные и отношения</h2>
+
+            <div class="step">
+              <p class="question">Есть ли животные?</p>
+              <label>
+                <input type="radio" name="pets_now" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="pets_now" value="Нет">
+                Нет
+              </label>
+
+              <label for="pets-list">Кто, если есть?</label>
+              <input type="text" id="pets-list" name="pets_list" placeholder="Например: кот, собака">
+            </div>
+
+            <div class="step">
+              <p class="question">Хотел бы животное?</p>
+              <label>
+                <input type="radio" name="want_pet" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="want_pet" value="Нет">
+                Нет
+              </label>
+
+              <label for="dream-pet">Кого?</label>
+              <input type="text" id="dream-pet" name="dream_pet" placeholder="Например: корги, кот, ворон">
+            </div>
+
+            <div class="step">
+              <label for="values">Что ценишь в людях?</label>
+              <textarea id="values" name="values" rows="4" placeholder="Напиши, что для тебя важно"></textarea>
+            </div>
+
+            <div class="step">
+              <p class="question">Тебе изменяли?</p>
+              <label>
+                <input type="radio" name="was_cheated_on" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="was_cheated_on" value="Нет">
+                Нет
+              </label>
+            </div>
+
+            <div class="step">
+              <p class="question">Ты изменял?</p>
+              <label>
+                <input type="radio" name="cheated" value="Да" required>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="cheated" value="Нет">
+                Нет
+              </label>
+            </div>
+          </div>
+
+          <!-- Шаг 7 -->
+          <div class="form-step" data-step="7">
+            <h2 class="step-title">Шаг 7 — О себе и финал</h2>
+
+            <div class="step">
+              <label for="fact">Любой факт о тебе</label>
+              <textarea id="fact" name="fact" rows="4" placeholder="Что-то интересное, странное, милое или неожиданное"></textarea>
+
+              <label for="extra">Еще что-то, что мне точно стоит знать о тебе</label>
+              <textarea id="extra" name="extra" rows="5" placeholder="Напиши все, что считаешь важным"></textarea>
+
+              <label for="meme">Прикрепи любимый мем</label>
+              <input type="file" id="meme" name="meme" accept="image/*">
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Отправить анкету</button>
+          </div>
+
+        </form>
+
+        <div class="extra-actions">
+          <a href="#" class="my-form-link">Посмотреть мою анкету</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
