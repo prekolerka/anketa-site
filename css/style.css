@@ -112,6 +112,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 20px;
 }
 
 /* ===== БЛОК ФОРМЫ ===== */
@@ -255,30 +256,20 @@ button[type="submit"]:active {
   transform: translateY(0);
 }
 
-/* ===== НИЖНИЙ БЛОК ===== */
-.info {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 8px 14px 48px;
+
+.extra-actions, .form-actions{
   text-align: center;
 }
-
-.info p {
-  margin: 0 0 12px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--text-soft);
-}
-
-.info a {
+.extra-actions a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 300px;
   min-height: 50px;
   padding: 12px 22px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #8fc48d 0%, #79ab77 100%);
+  background: linear-gradient(180deg, #1b361a 0%, #79ab77 100%);
   color: #fff;
   text-decoration: none;
   font-size: 15px;
@@ -286,10 +277,11 @@ button[type="submit"]:active {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.info a:hover {
+.extra-actions a:hover {
   transform: translateY(-2px);
   background: linear-gradient(180deg, #85ba83 0%, #6f9f6d 100%);
 }
+
 
 /* ===== TABLET ===== */
 @media (min-width: 768px) {

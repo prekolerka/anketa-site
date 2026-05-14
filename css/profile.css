@@ -1,0 +1,416 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #eef5ea;
+  --card: rgba(255, 252, 247, 0.9);
+  --card-strong: #fbf8f1;
+  --text: #213629;
+  --text-soft: #617362;
+  --green: #6e8668;
+  --green-dark: #405c45;
+  --green-light: #dfe8d9;
+  --red: #8d3333;
+  --border: rgba(102, 126, 98, 0.18);
+  --shadow: 0 12px 30px rgba(75, 99, 77, 0.12);
+  --radius: 22px;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(209, 226, 198, 0.8), transparent 35%),
+    radial-gradient(circle at top right, rgba(246, 224, 228, 0.8), transparent 35%),
+    linear-gradient(180deg, #eef5ea 0%, #f8f3ee 55%, #edf5e9 100%);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 18px 14px 32px;
+}
+
+/* header */
+
+.profile-header {
+  margin-bottom: 16px;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--green-dark);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.profile-title {
+  margin: 0 0 8px;
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.profile-subtitle {
+  margin: 0;
+  max-width: 620px;
+  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* grid */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.card,
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.card p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* hero */
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-photo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-info {
+  padding: 20px;
+}
+
+.hero-info h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.hero-meta {
+  margin: 0 0 10px;
+  color: var(--text-soft);
+  font-size: 18px;
+}
+
+blockquote {
+  margin: 18px 0 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(238, 245, 234, 0.65);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* lists */
+
+.list,
+.check-list,
+.cross-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li,
+.check-list li,
+.cross-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.list li::before {
+  content: "♥";
+  margin-right: 10px;
+  color: var(--green);
+}
+
+.check-list li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.cross-list li::before {
+  content: "×";
+  margin-right: 10px;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* tags */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 15px;
+}
+
+/* places */
+
+.places-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.places-grid img,
+.gallery-grid img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* music */
+
+.music-box {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.music-cover {
+  width: 74px;
+  height: 74px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.music-cover img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.music-artist,
+.music-title {
+  margin: 0;
+}
+
+.music-artist {
+  color: var(--text-soft);
+}
+
+.music-title {
+  font-weight: 700;
+}
+
+.fake-player {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.player-line {
+  width: 140px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--green-light);
+}
+
+/* stats */
+
+.stat {
+  display: grid;
+  grid-template-columns: 110px 1fr 44px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.stat-line {
+  height: 8px;
+  border-radius: 999px;
+  background: #d8ddd2;
+  overflow: hidden;
+}
+
+.stat-line span {
+  display: block;
+  height: 100%;
+  background: var(--green);
+  border-radius: inherit;
+}
+
+.stat b {
+  font-weight: 500;
+}
+
+/* starter */
+
+.starter-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.starter-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 22px;
+}
+
+.starter-item span {
+  font-size: 15px;
+}
+
+/* gallery */
+
+.final-note {
+  margin-top: 16px !important;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .hero-card {
+    grid-row: span 2;
+  }
+
+  .profile-title {
+    font-size: 42px;
+  }
+
+  .starter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card {
+    grid-column: span 2;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* desktop */
+
+@media (min-width: 1180px) {
+  .profile-grid {
+    grid-template-columns: 1.05fr 1.4fr 1.35fr;
+    gap: 18px;
+  }
+
+  .hero-card {
+    grid-row: span 3;
+  }
+
+  .about-card {
+    grid-column: span 1;
+  }
+
+  .important-card {
+    grid-column: span 1;
+  }
+
+  .vibe-card {
+    grid-column: span 1;
+  }
+
+  .places-card {
+    grid-column: span 1;
+  }
+
+  .music-card {
+    grid-column: span 1;
+  }
+
+  .stats-card {
+    grid-column: span 1;
+  }
+
+  .starter-card {
+    grid-column: span 1;
+  }
+
+  .gallery-card {
+    grid-column: span 2;
+  }
+
+  .flags-card {
+    min-height: 280px;
+  }
+
+  .profile-title {
+    font-size: 48px;
+  }
+}

@@ -1,15 +1,32 @@
-
-
-
 console.log("script works");
 
+// Открытие инпута "Другое"
+const steps = document.querySelectorAll('.step');
 
+steps.forEach(step => {
+  const radios = step.querySelectorAll('input[type="radio"]');
+  const otherInput = step.querySelector('.other-input');
+
+  if (!otherInput) return;
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked && radio.value === 'Другое') {
+        otherInput.classList.remove('hidden');
+      } else if (radio.checked) {
+        otherInput.classList.add('hidden');
+        otherInput.value = '';
+      }
+    });
+  });
+});
+
+// Отправка формы в Telegram
 const form = document.getElementById('candidateForm');
 
 if (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log('submit works');
 
     const formData = new FormData(form);
 
@@ -19,7 +36,7 @@ if (form) {
       message += `${key}: ${value}\n`;
     });
 
-    const TOKEN = "8687474681:AAFs0q1tDOJcIiFMDR4OAARcX2w9ohyyAvk";
+    const TOKEN = "8687474681:AAFci5jWH8G4-hfsG9lxeuCjYFjSN2Xe2DE";
     const CHAT_ID = "1841352974";
 
     fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
